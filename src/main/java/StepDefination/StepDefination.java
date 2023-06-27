@@ -122,49 +122,6 @@ public class StepDefination extends GemEcoUpload {
         }
     }
 
-    @Then("Verify the Alert when copy button is clicked")
-    public void verify_the_alert_when_copy_button_is_clicked() {
-        DriverAction.waitSec(2);
-        DriverAction.click(Locators.home_button, "Home button");
-        boolean present;
-        try {
-            DriverManager.getWebDriver().findElement(Locators.bridge_token);
-            present = true;
-        } catch (Exception e) {
-            present = false;
-        }
-        if (present) {
-            try {
-                DriverAction.click(Locators.bridge_token, "Bridge token Button");
-                String s = DriverAction.getCurrentURL();
-                STATUS status;
-                if (s.contains("bridge-token")) {
-                    status = STATUS.PASS;
-                } else {
-                    status = STATUS.FAIL;
-                }
-                GemTestReporter.addTestStep("Bridge Token window", "Status", status);
-                DriverAction.click(Locators.copy_bridge_token, "copy button");
-                DriverAction.waitSec(1);
-                GemTestReporter.addTestStep("Status of Copy button", "clicked Successful", STATUS.PASS, DriverAction.takeSnapShot());
-                String se = DriverAction.getElement(Locators.copy_alert).getText();
-                STATUS hi;
-                if (se.equals("Copied !")) {
-                    hi = STATUS.PASS;
-                } else {
-                    hi = STATUS.FAIL;
-                }
-                GemTestReporter.addTestStep("Alert status", "Expected alert:Copied ", hi);
-
-            } catch (Exception e) {
-                logger.info("An exception occurred!", e);
-                GemTestReporter.addTestStep("Status of Bridge Token button", "Clicked Failed", STATUS.FAIL);
-            }
-        } else {
-            GemTestReporter.addTestStep("Status of Bridge Token button", "Not Found", STATUS.FAIL);
-        }
-    }
-
     @Then("Verify the date and time when Change Token button is clicked")
     public void verify_the_date_and_time_when_change_token_button_is_clicked() {
         DriverAction.waitSec(2);

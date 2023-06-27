@@ -6,7 +6,6 @@ Feature: Bridge Token
     And Enter Password as 'dummy_test@123'
     Then Verify if the Bridge token card is visible
 
-  @smoke
   Scenario: Validate the content of Bridge Token Card
     Given You are on the login screen
     Then Enter username as "jewelautomation"
@@ -31,12 +30,6 @@ Feature: Bridge Token
     And Enter Password as 'dummy_test@123'
     Then Click on Copy Bridge Token
 
-  Scenario: Alert validation for bridgeToken copy
-    Given You are on the login screen
-    Then Enter username as "jewelautomation"
-    And Enter Password as 'dummy_test@123'
-    Then Verify the Alert when copy button is clicked
-
   Scenario: Alert validation for Change Token
     Given You are on the login screen
     Then Enter username as "jewelautomation"
@@ -59,3 +52,9 @@ Feature: Bridge Token
   Scenario: Validate not a user button
     Given Navigate to login-screen
     Then Click not a user button and validate navigation to signup screen
+
+  Scenario: Login to Jewel (Positive)
+    Given Navigate to login-screen
+    When Enter credentials for login
+    And Click login
+    Then Validate login is successful

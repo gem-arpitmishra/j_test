@@ -84,4 +84,20 @@ public class Login_Logout {
             GemTestReporter.addTestStep("ERROR", "SOME ERROR OCCURRED: " + e, STATUS.FAIL, DriverAction.takeSnapShot());
         }
     }
+
+    @Then("Validate login is successful")
+    public void login_success() {
+        try {
+            System.out.println(DriverAction.getCurrentURL());
+            System.out.println(DriverAction.getElementText(Locators.homepage_username));
+            if (DriverAction.getCurrentURL().contains("home") && DriverAction.getElementText(Locators.homepage_username).equals(Script_PreConfig.username)) {
+                GemTestReporter.addTestStep("Validate Login", "Login successful", STATUS.PASS, DriverAction.takeSnapShot());
+            } else {
+                GemTestReporter.addTestStep("Validate Login", "Failed to login", STATUS.FAIL, DriverAction.takeSnapShot());
+            }
+        } catch (Exception e) {
+            logger.info("An exception occurred!", e);
+            GemTestReporter.addTestStep("ERROR", "SOME ERROR OCCURRED: " + e, STATUS.FAIL, DriverAction.takeSnapShot());
+        }
+    }
 }
