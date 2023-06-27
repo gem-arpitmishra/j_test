@@ -22,6 +22,7 @@ public class Hook {
         ChromeOptions options = new ChromeOptions();
         options.setHeadless(true);
         DriverManager.initializeChrome(options);
+        DriverAction.maximizeToDefaultBrowserSize();
         DriverAction.launchUrl(GemJarUtils.getGemJarConfigData("launchUrl"));
         DriverAction.setImplicitTimeOut(Long.parseLong(GemJarGlobalVar.implicitTime));
         DriverAction.setPageLoadTimeOut(Long.parseLong(GemJarGlobalVar.pageTimeout));
