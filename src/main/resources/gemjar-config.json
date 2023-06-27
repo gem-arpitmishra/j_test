@@ -5,12 +5,11 @@
   "jewel_user": "gemini.demo",
   "jewel_bridge_token": "a3e8c34b-881c-4181-91c7-756f5ab867711687850447891",
   "enter_point": "https://apis.gemecosystem.com/enter-point",
-  "feature": "src/main/resources/features/",
   "tags": "",
   "scenario": "",
   "email_report": "n",
   "email_to": [
-    "dipanshu.kapoor@geminisolutions.com",
+    "dipanshu.kapoor@geminisolutions.com"
   ],
   "glue_code": "StepDefination",
   "prod": {
