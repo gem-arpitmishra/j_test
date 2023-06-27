@@ -1,4 +1,4 @@
-Feature: Bridge Token
+Feature: Demo
 
   Scenario: Validate the Bridge Token Card Present on the home screen
     Given You are on the login screen
