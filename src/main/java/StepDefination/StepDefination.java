@@ -1,44 +1,24 @@
 package StepDefination;
 
 import Objects.Locators;
-import Objects.Script_PreConfig;
 import com.gemini.generic.reporting.GemEcoUpload;
 import com.gemini.generic.reporting.GemTestReporter;
 import com.gemini.generic.reporting.STATUS;
 import com.gemini.generic.ui.utils.DriverAction;
 import com.gemini.generic.ui.utils.DriverManager;
-import com.gemini.generic.utils.GemJarGlobalVar;
-import com.gemini.generic.utils.ProjectConfigData;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
 import org.apache.commons.lang3.StringUtils;
-import org.openqa.selenium.*;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.Color;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.awt.*;
-import java.awt.datatransfer.DataFlavor;
-import java.time.Duration;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
 
 import static Objects.Locators.*;
 
 public class StepDefination extends GemEcoUpload {
-    public static String company = "Gemini" + Math.random();
-    public static String str = "company" + Math.random();
-    public static String projectNames = "SUITE_" + Math.random();
     Logger logger = LoggerFactory.getLogger(StepDefination.class);
-
-
 
     @Given("You are on the login screen")
     public void you_are_on_the_login_screen() {
@@ -72,9 +52,6 @@ public class StepDefination extends GemEcoUpload {
             GemTestReporter.addTestStep("ERROR", "SOME ERROR OCCURRED", STATUS.FAIL);
         }
     }
-
-
-
 
     @Then("Verify the Bridge Token Button is clickable or not")
     public void verify_the_bridge_token_button_is_clickable_or_not() {
@@ -240,8 +217,6 @@ public class StepDefination extends GemEcoUpload {
         }
     }
 
-
-
     @Then("Verify if the Bridge token card is visible")
     public void verify_if_the_bridge_token_card_is_visible() {
         DriverAction.waitSec(2);
@@ -307,5 +282,4 @@ public class StepDefination extends GemEcoUpload {
             GemTestReporter.addTestStep("Error", "No such element", STATUS.FAIL);
         }
     }
-
   }
