@@ -10,6 +10,7 @@
   "feature": "src/main/resources/features",
   "console_report": "n",
   "email_report": "n",
+  "feature": "src/main/resources/features/",
   "email_to": [
     "dipanshu.kapoor@geminisolutions.com"
   ],
