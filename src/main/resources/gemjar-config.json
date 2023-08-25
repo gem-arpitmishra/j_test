@@ -1,12 +1,13 @@
 {
   "environment": "prod",
-  "project_name": "GEMINI_INTERNAL",
+  "project_name": "JEWEL",
   "report_name": "JEWEL-UI",
-  "jewel_user": "gemini.demo",
-  "jewel_bridge_token": "a3e8c34b-881c-4181-91c7-756f5ab867711687850447891",
+  "jewel_user": "geco-maulick",
+  "jewel_bridge_token": "f9cae95b-cccf-404c-aded-895e2d49a5d41684151414484",
   "enter_point": "https://apis.gemecosystem.com/enter-point",
   "tags": "",
   "scenario": "",
+  "feature": "src/main/resources/features",
   "console_report": "n",
   "email_report": "n",
   "email_to": [
