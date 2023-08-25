@@ -16,13 +16,18 @@
         <dependency>
             <groupId>com.gemecosystem.gemjar</groupId>
             <artifactId>gemjar-core</artifactId>
-            <version>1.2.5</version>
+            <version>1.2.7</version>
             <exclusions>
                 <exclusion>
-                    <groupId>com.automation-remarks</groupId>
-                    <artifactId>video-recorder-junit5</artifactId>
+                    <groupId>io.github.bonigarcia</groupId>
+                    <artifactId>webdrivermanager</artifactId>
                 </exclusion>
             </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>io.github.bonigarcia</groupId>
+            <artifactId>webdrivermanager</artifactId>
+            <version>5.4.1</version>
         </dependency>
     </dependencies>
     <build>
