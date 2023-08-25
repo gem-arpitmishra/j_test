@@ -7,6 +7,7 @@
   "enter_point": "https://apis.gemecosystem.com/enter-point",
   "tags": "",
   "scenario": "",
+  "console_report": "n",
   "email_report": "n",
   "email_to": [
     "dipanshu.kapoor@geminisolutions.com"
