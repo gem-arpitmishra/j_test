@@ -18,7 +18,7 @@ public class Hook {
     @Before
     public static void hook() throws GemException {
          DriverManager.setUpBrowser();
-//        DriverAction.maximizeToDefaultBrowserSize();
+        DriverAction.maximizeToDefaultBrowserSize();
 //       WebDriverManager.chromedriver().setup();
 //       ChromeOptions options = new ChromeOptions();
 //       options.setHeadless(true);
