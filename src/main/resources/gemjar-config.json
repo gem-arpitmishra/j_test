@@ -13,7 +13,7 @@
   ],
   "glue_code": "StepDefination",
   "prod": {
-    "browser_name": "CHROME_HEADLESS",
+    "browser_name": "chrome",
     "launch_url": "https://jewel.gemecosystem.com/",
     "browser_timeout": 10
   },
